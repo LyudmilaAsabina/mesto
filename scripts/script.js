@@ -7,6 +7,7 @@ let profileSubline = document.querySelector('.profile__author-subline');
 const formOpener = document.querySelector('.profile__edit-button');
 const content = document.querySelector('.popup');
 const formCloused = document.querySelector('.popup__close-button')
+const formCloser = document.querySelector('.popup__close-button');
 
 function popupOpened() {
     content.classList.add('popup_opened');
@@ -14,6 +15,13 @@ function popupOpened() {
     jobInput.value = profileSubline.textContent;
 }
 formOpener.addEventListener('click', popupOpened);
+
+function popupClosed() {
+    content.classList.remove('popup_opened');
+}
+
+formCloser.addEventListener('click', popupClosed);
+
 
 function formSubmitHandler (evt) {
     evt.preventDefault(); 
@@ -26,13 +34,9 @@ formElement.addEventListener('submit', formSubmitHandler);
 
 
 
-const formCloser = document.querySelector('.popup__close-button');
 
-function popupClosed() {
-    content.classList.remove('popup_opened');
-}
 
-formCloser.addEventListener('click', popupClosed);
+
 
 
 

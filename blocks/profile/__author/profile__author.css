@@ -10,6 +10,7 @@
    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: 294px;
    
    
    
@@ -17,12 +18,12 @@
 
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1279px) {
    .profile__author {
        font-size: 27px;
        line-height: 33px;
        text-align: center;
-       max-width: 294px;
+       max-width: 189px;
        
 }
    }
